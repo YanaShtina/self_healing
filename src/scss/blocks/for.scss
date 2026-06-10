@@ -1,0 +1,182 @@
+.for-whom {
+	padding: 96px 0;
+	background: #f3eee5;
+
+
+	&__title {
+		margin: 0 0 48px;
+		text-align: center;
+		font-weight: 700;
+		font-size: 64px;
+		line-height: 1;
+		color: #6f54a3;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 24px 32px;
+	}
+
+	&__card {
+		position: relative;
+		overflow: hidden;
+		min-height: 196px;
+		padding: 28px 28px 28px 40%;
+		border-radius: 28px;
+		background-color: #8a7ac6;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: right center;
+		box-shadow: 0 12px 30px rgba(88, 56, 136, 0.18);
+		isolation: isolate;
+		display: flex;
+		align-items: flex-start;
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			z-index: 0;
+			background:
+				linear-gradient(
+					260deg,
+					rgba(111, 84, 163, 0.36) 0%,
+					rgba(111, 84, 163, 0.9) 26%,
+					rgba(111, 84, 163, 0.72) 48%,
+					rgba(111, 84, 163, 0.38) 66%,
+					rgba(111, 84, 163, 0.12) 82%,
+					rgba(111, 84, 163, 0) 100%
+				);
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			z-index: 0;
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(56, 30, 108, 0.1) 100%);
+			pointer-events: none;
+		}
+
+		>* {
+			position: relative;
+			z-index: 1;
+		}
+
+		&_psychologist {
+			background-image: url("../img/1Professional woman in a cozy study.png");
+			background-position: right center;
+		
+			
+		}
+
+		&_tarot {
+			background-image: url("../img/card_2_tarot_numerology.png");
+			background-position: right center;
+		}
+
+		&_gift {
+			background-image: url("../img/card_3_clairvoyance_gift.png");
+			background-position: right center;
+		}
+
+		&_special {
+			background-image: url("../img/card_4_special_inner_power.png");
+			background-position: right center;
+		}
+
+		&_book {
+			background-image: url("../img/card_6_helping_professions.png");
+			
+			background-position: right center;
+		}
+
+		&_helping {
+			background-image: url("../img/card_5_book_of_life.png");
+			background-position: right center;
+		}
+
+		@media (max-width: 1023px) {
+			min-height: 180px;
+			padding: 24px 24px 24px 28px;
+			border-radius: 24px;
+		}
+
+		@media (max-width: 767px) {
+			min-height: 140px;
+			padding: 22px 20px;
+			border-radius: 22px;
+			background-position: center right;
+
+			&::before {
+				background:
+					linear-gradient(
+						90deg,
+						rgba(111, 84, 163, 0.6) 0%,
+						rgba(111, 84, 163, 0.88) 36%,
+						rgba(111, 84, 163, 0.7) 60%,
+						rgba(111, 84, 163, 0.26) 82%,
+						rgba(111, 84, 163, 0) 100%
+					);
+			}
+		}
+	}
+
+	&__text {
+		width: min(100%, 360px);
+		margin: 0;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 1.35;
+		color: #fff;
+		text-wrap: balance;
+
+		b,
+		strong {
+			font-weight: 700;
+            color: #efe4ac;
+		}
+
+		@media (max-width: 1023px) {
+			width: min(100%, 320px);
+			font-size: 17px;
+		}
+
+		@media (max-width: 767px) {
+			width: 100%;
+			font-size: 16px;
+			line-height: 1.4;
+			text-align: center;
+			
+		}
+	}
+
+	@media (max-width: 1023px) {
+		padding: 72px 0;
+
+		&__title {
+			margin-bottom: 36px;
+			font-size: 48px;
+		}
+
+		&__grid {
+			gap: 20px;
+		}
+	}
+
+	@media (max-width: 767px) {
+		padding: 30px 0;
+
+		&__title {
+			margin-bottom: 28px;
+			font-size: 34px;
+			line-height: 1.08;
+		}
+
+		&__grid {
+			grid-template-columns: 1fr;
+			gap: 16px;
+		}
+	}
+}

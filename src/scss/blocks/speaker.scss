@@ -1,0 +1,254 @@
+.about-speaker {
+	position: relative;
+	padding: 30px 0 30px;
+	overflow: hidden;
+	background: #7d6cc8;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background:
+			linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 22%),
+			linear-gradient(90deg, rgba(151, 131, 220, 0.18) 0%, rgba(125, 108, 200, 0) 45%, rgba(93, 70, 173, 0.14) 100%);
+		pointer-events: none;
+	}
+
+	&__inner {
+		position: relative;
+		z-index: 1;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) 420px;
+		align-items: center;
+		gap: 46px;
+
+		@media (max-width: 1023px) {
+			grid-template-columns: 1fr;
+			gap: 12px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		@media (max-width: 1023px) {
+			order: 2;
+		}
+	}
+
+	&__heading {
+		margin-bottom: 22px;
+	}
+
+	&__subtitle {
+		margin-bottom: 8px;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 1.1;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.9);
+
+		@media (max-width: 767px) {
+			font-size: 16px;
+		}
+	}
+
+	&__title {
+		margin: 0;
+		font-weight: 700;
+		font-size: 54px;
+		line-height: 0.98;
+		letter-spacing: 0.01em;
+		text-transform: uppercase;
+		color: #fff;
+
+		@media (max-width: 1023px) {
+			font-size: 44px;
+		}
+
+		@media (max-width: 767px) {
+			font-size: 32px;
+			line-height: 1.02;
+		}
+	}
+
+	&__card {
+		width: 100%;
+		max-width: 760px;
+		padding: 34px 34px 30px;
+		border-radius: 28px;
+		background: rgba(248, 244, 240, 0.97);
+		box-shadow: 0 20px 45px rgba(20, 7, 43, 0.18);
+		backdrop-filter: blur(6px);
+
+		@media (max-width: 767px) {
+			padding: 22px 20px;
+			border-radius: 22px;
+		}
+	}
+
+	&__lead {
+		margin-bottom: 24px;
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 1.35;
+		color: #121212;
+
+		@media (max-width: 767px) {
+			margin-bottom: 18px;
+			font-size: 18px;
+		}
+	}
+
+	&__list {
+		display: grid;
+		gap: 18px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__item {
+		display: grid;
+		grid-template-columns: 18px 1fr;
+		gap: 14px;
+		align-items: start;
+		font-size: 17px;
+		line-height: 1.45;
+		color: #1f1f1f;
+
+		strong {
+			font-weight: 700;
+		}
+
+		@media (max-width: 767px) {
+			grid-template-columns: 16px 1fr;
+			gap: 10px;
+			font-size: 15px;
+			line-height: 1.42;
+		}
+	}
+
+	&__icon {
+		position: relative;
+		top: 2px;
+		font-size: 18px;
+		line-height: 1;
+		color: #b97cff;
+
+		@media (max-width: 767px) {
+			font-size: 16px;
+		}
+	}
+
+	&__button {
+		margin-top: 28px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 320px;
+		min-height: 86px;
+		padding: 20px 40px;
+		border-radius: 28px;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 1;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #2e105f;
+		background: linear-gradient(135deg, #f8df9b 0%, #f0bf45 46%, #e5a10a 100%);
+		box-shadow:
+			inset 0 -4px 0 rgba(141, 88, 0, 0.22),
+			0 20px 35px rgba(24, 8, 53, 0.24);
+
+		@media (max-width: 767px) {
+			width: 100%;
+			min-width: 0;
+			min-height: 72px;
+			padding: 18px 24px;
+			font-size: 18px;
+			border-radius: 24px;
+		}
+	}
+
+	&__visual {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 620px;
+
+		@media (max-width: 1023px) {
+			order: 1;
+			min-height: 460px;
+		}
+
+		@media (max-width: 767px) {
+			min-height: 150px;
+		}
+	}
+
+	&__glow {
+		position: absolute;
+		inset: 50% auto auto 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+		background:
+			linear-gradient(180deg, rgba(125, 108, 200, 0.32) 0%, rgba(125, 108, 200, 0.32) 100%),
+			url("../img/bg.jpg") center / contain no-repeat;
+		opacity: 1;
+		mix-blend-mode: screen;
+		filter: blur(3px);
+	
+		@media (max-width: 1023px) {
+			/* width: 520px;
+			height: 520px; */
+		}
+	
+		@media (max-width: 767px) {
+			/* width: 360px;
+			height: 360px; */
+			opacity: 0.22;
+		}
+	}
+
+	&__photo {
+		position: relative;
+		z-index: 1;
+		width: 360px;
+		border-radius: 34px;
+		overflow: hidden;
+		box-shadow:
+			0 30px 60px rgba(20, 7, 43, 0.34),
+			0 0 0 1px rgba(255, 255, 255, 0.1);
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			opacity: 0.8;
+		}
+
+		@media (max-width: 1023px) {
+			width: 320px;
+		}
+
+		@media (max-width: 767px) {
+			width: 240px;
+			border-radius: 24px;
+		}
+	}
+
+	@media (max-width: 1023px) {
+		padding: 72px 0 84px;
+	}
+
+	@media (max-width: 767px) {
+		padding: 30px 0 30px;
+	}
+}

@@ -1,0 +1,52 @@
+// breakpoints
+$mobile: 767px;
+$tablet: 1023px;
+$desktop: 1440px;
+
+// container widths
+$container-desktop: 1280px;
+$container-tablet: 960px;
+$container-mobile: 100%;
+
+// side paddings
+$padding-desktop: 32px;
+$padding-tablet: 24px;
+$padding-mobile: 16px;
+
+.container {
+  width: 100%;
+/*   margin-top: 30px; */
+  max-width: $container-desktop;
+  margin-inline: auto;
+  padding-inline: $padding-desktop;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet) {
+	max-width: $container-tablet;
+    padding-inline: $padding-tablet;
+  }
+
+  @media (max-width: $mobile) {
+	max-width: $container-mobile;
+    padding-inline: $padding-mobile;
+  }
+}
+
+
+.container {
+	width: min(100% - 32px, 1280px);
+	margin-inline: auto;
+
+	@media (max-width: 1023px){
+		width: 100%;
+	}
+
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+  }
+  
+
+  
+
+
